@@ -1,0 +1,40 @@
+@import '../../scss/_variables';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  width: 25%;
+  background: $secondBgColor;
+
+  .content {
+    h1 {
+      color: $primaryColor;
+      letter-spacing: 3px;
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 18px;
+      letter-spacing: 2px;
+      align-self: start;
+      padding: 50px 0 50px 0;
+
+
+      a {
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+    }
+
+    span {
+      color: $secondaryColor;
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+@import "src/scss/variables";
+
+.container {
+  width: 75%;
+  background: $bgColor;
+  position: relative;
+  min-height: 100vh;
+  left: 25%;
+  padding: 0 0 20px 0;
+
+  .content {
+    margin: 0 60px;
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 40px;
+      grid-row-gap: 40px;
+
+
+    }
+  }
+}

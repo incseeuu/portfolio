@@ -1,0 +1,150 @@
+@import "src/scss/variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  background: $bgColor;
+  position: relative;
+  min-height: 100vh;
+  left: 25%;
+
+  .content {
+    margin: 0 60px;
+
+    .photoBlock {
+      border-bottom: 1px solid #dfdfdf;
+      border-bottom-color: rgba(255,255,255,.1);
+      margin: 20px 0;
+      padding: 20px 0;
+
+      img {
+        width: 886px;
+        height: 515px;
+      }
+
+      h2 {
+        color: $primaryColor;
+      }
+
+      span {
+        color: $secondaryColor;
+      }
+    }
+
+    .description {
+      white-space: pre-line;
+      line-height: 30px;
+      color: $secondaryColor;
+      border-bottom: 1px solid #dfdfdf;
+      border-bottom-color: rgba(255,255,255,.1);
+      margin: 20px 0;
+      padding: 0 0 20px 0;
+    }
+
+    .about {
+      display: flex;
+      justify-content: space-between;
+      line-height: 30px;
+      border-bottom: 1px solid #dfdfdf;
+      border-bottom-color: rgba(255,255,255,.1);
+
+      .personalData {
+        display: flex;
+        margin-left: -40px;
+
+        ul {
+          list-style-type: none;
+        }
+      }
+      .personalDataTwo{
+        display: flex;
+
+        ul {
+          list-style-type: none;
+        }
+      }
+      .key {
+        color: $primaryColor;
+      }
+
+      .value {
+        color: $secondaryColor;
+      }
+    }
+
+    .education {
+      color: $primaryColor;
+
+      .educationList {
+
+        ul{
+          list-style-type: none;
+
+          li {
+            margin: 0;
+            width: 100%;
+            position: relative;
+            padding-left: 20px;
+
+            &::before{
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: $secondaryColor;
+            }
+          }
+        }
+
+
+        .listInner {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 100px;
+          width: 50%;
+
+          &::before{
+            content: "";
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            background-color: #494b50;
+            border-radius: 100%;
+            border: solid 1px rgba(255,255,255,.2);
+            left: -30px;
+            top: 30px;
+          }
+
+          .time {
+            background-color: rgba(255,255,255,.05);
+            display: inline-block;
+            padding: 5px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            white-space: nowrap;
+          }
+
+          .place {
+            position: relative;
+            top: -10px;
+
+            span {
+             color: $secondaryColor;
+            }
+
+            a{
+              color: $secondaryColor;
+
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

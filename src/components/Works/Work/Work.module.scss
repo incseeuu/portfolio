@@ -1,0 +1,60 @@
+@import "src/scss/variables";
+
+.work {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .shadow {
+    background: #494b50;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transform: scaleY(1);
+    transition: 0.5s ease-in-out;
+
+
+  }
+
+  .view {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    color: $primaryColor;
+
+    h2 {
+      transition: 0.5s ease-in-out;
+    }
+
+    a {
+      align-self: center;
+      color: $primaryColor;
+      text-decoration: none;
+      background: $secondBgColor;
+      letter-spacing: 2px;
+      padding: 10px 20px;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  &:hover .view h2 {
+    opacity: 0;
+  }
+
+  &:hover .view a {
+    opacity: 1;
+  }
+  &:hover .shadow {
+    transform: scaleY(0);;
+  }
+}
