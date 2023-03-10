@@ -2,10 +2,16 @@ import React, { CSSProperties } from 'react';
 import s from './Skills.module.scss'
 import Technology from "./Technology/Technology";
 import LocalHeader from "../../common/components/LocalHeader";
+import {motion} from "framer-motion";
 
 const Skills = () => {
     return (
-        <div className={s.container}>
+        <motion.div
+            className={s.container}
+            initial={{width: 0}}
+            animate={{width: '75%'}}
+            exit={{x: window.innerWidth, transition: { duration: 1}}}
+        >
             <div className={s.content}>
                 <LocalHeader title={'SKILLS'} description={'What I Know'}/>
                 <div className={s.skills}>
@@ -66,7 +72,7 @@ const Skills = () => {
                     />
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

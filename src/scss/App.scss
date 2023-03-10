@@ -1,5 +1,8 @@
+@import "src/scss/variables";
+
 .App {
-  display: flex;
+  background: $bgColor;
+  display: grid;
   max-width: 100vw;
   font-family: 'Tilt Neon', cursive;
 }

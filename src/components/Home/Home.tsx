@@ -1,12 +1,18 @@
 import React from 'react';
 import s from './Home.module.scss';
 import photoBg from '../../assets/main.jpg'
+import {motion} from "framer-motion";
 
 
 const Home = () => {
 
     return (
-        <div className={s.container}>
+        <motion.div
+            className={s.container}
+            initial={{width: 0}}
+            animate={{width: '75%'}}
+            exit={{x: window.innerWidth, transition: { duration: 1}}}
+        >
             <div className={s.leftSide}>
                 <div className={s.photo}>
                     <img src={photoBg}/>
@@ -59,7 +65,7 @@ const Home = () => {
                         <a href={'https://www.instagram.com/incseeu/'} target='_blank'>
                             <svg className={s.icon} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                  viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
+                                <path fillRule="evenodd"
                                       d="M10.825091,2 L13.1738932,2 C14.8491598,2.00379146 15.2338099,2.01854561 16.1226982,2.059103 C17.187141,2.10765278
                                   17.9141174,2.27672349 18.5502266,2.52395815 C19.2078518,2.77948955 19.7655588,3.12144192 20.3215589,3.67740233 C20.8775194,4.23340244
                                   21.2194717,4.79110953 21.4750428,5.44873467 C21.7222377,6.08484389 21.8913085,6.81182019 21.9398582,7.87626307 C21.9869049,8.90737346
@@ -80,7 +86,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,10 +1,16 @@
 import React from 'react';
 import s from './Contacts.module.scss'
 import LocalHeader from "../../common/components/LocalHeader";
+import {motion} from "framer-motion";
 
 const Contact = () => {
     return (
-        <div className={s.container}>
+        <motion.div
+            className={s.container}
+            initial={{width: 0}}
+            animate={{width: '75%'}}
+            exit={{x: window.innerWidth, transition: { duration: 1}}}
+        >
             <div className={s.content}>
                 <LocalHeader title={'CONTACTS'} description={'Get in Touch'} />
                 <div className={s.map}>
@@ -20,7 +26,7 @@ const Contact = () => {
                         <button>Send Message</button>
                     </form>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

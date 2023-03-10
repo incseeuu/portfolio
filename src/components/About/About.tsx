@@ -1,10 +1,16 @@
 import React from 'react';
 import s from './About.module.scss'
 import LocalHeader from "../../common/components/LocalHeader";
+import {motion} from "framer-motion";
 
 const About = () => {
     return (
-        <div className={s.container}>
+        <motion.div
+            className={s.container}
+            initial={{width: 0}}
+            animate={{width: '75%'}}
+            exit={{x: window.innerWidth, transition: { duration: 1}}}
+        >
             <div className={s.content}>
                 <LocalHeader title={'ABOUT ME'} description={'What About Me'} />
                 <div className={s.photoBlock}>
@@ -77,7 +83,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

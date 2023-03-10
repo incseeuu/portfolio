@@ -6,11 +6,17 @@ import pizza from '../../assets/pizza.jpg';
 import todo from '../../assets/todo.jpg';
 import bot from '../../assets/bot.webp';
 import Work from './Work/Work';
+import {motion} from "framer-motion";
 
 
 const Works = () => {
     return (
-        <div className={s.container}>
+        <motion.div
+            className={s.container}
+            initial={{width: 0}}
+            animate={{width: '75%'}}
+            exit={{x: window.innerWidth, transition: { duration: 1}}}
+        >
             <div className={s.content}>
                 <LocalHeader title={'WORKS'} description={'What I Did'} />
                 <div className={s.works}>
@@ -32,7 +38,7 @@ const Works = () => {
                     />
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
