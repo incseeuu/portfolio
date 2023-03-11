@@ -9,8 +9,12 @@
   min-height: 100vh;
   left: 25%;
 
+
   .content {
     margin: 0 60px;
+    opacity: 0;
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
 
     .photoBlock {
       border-bottom: 1px solid #dfdfdf;
@@ -146,5 +150,13 @@
 
 
     }
+  }
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }

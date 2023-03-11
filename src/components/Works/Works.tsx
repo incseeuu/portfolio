@@ -13,9 +13,13 @@ const Works = () => {
     return (
         <motion.div
             className={s.container}
-            initial={{width: 0}}
-            animate={{width: '75%'}}
-            exit={{x: window.innerWidth, transition: { duration: 1}}}
+            // animate={{opacity: 1, scale: 1}}
+            // exit={{opacity: 0, scale: 0.5}}
+            // transition={{duration: 1, ease: 'circIn'}}
+            initial={{x: 300}}
+            animate={{x: 0}}
+            exit={{opacity: 0, transition: {duration: 0.2}}}
+            transition={{duration: 1}}
         >
             <div className={s.content}>
                 <LocalHeader title={'WORKS'} description={'What I Did'} />

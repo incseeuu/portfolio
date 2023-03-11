@@ -7,9 +7,11 @@ const About = () => {
     return (
         <motion.div
             className={s.container}
-            initial={{width: 0}}
-            animate={{width: '75%'}}
-            exit={{x: window.innerWidth, transition: { duration: 1}}}
+            // initial={{x: -500, opacity: 0, scale: 0.5}}
+            initial={{x: 300}}
+            animate={{x: 0}}
+            exit={{opacity: 0, transition: {duration: 0.2}}}
+            transition={{duration: 1}}
         >
             <div className={s.content}>
                 <LocalHeader title={'ABOUT ME'} description={'What About Me'} />

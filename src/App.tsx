@@ -7,7 +7,7 @@ import AnimationComponent from "./common/components/AnimationComponent";
 
 function App() {
     return (
-        <div className='App'>
+        <div className='App' style={{overflow: 'hidden'}}>
             <Sidebar/>
             <AnimationComponent/>
         </div>

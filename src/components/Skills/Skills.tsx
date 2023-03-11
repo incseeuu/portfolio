@@ -8,9 +8,10 @@ const Skills = () => {
     return (
         <motion.div
             className={s.container}
-            initial={{width: 0}}
-            animate={{width: '75%'}}
-            exit={{x: window.innerWidth, transition: { duration: 1}}}
+            initial={{x: 300}}
+            animate={{x: 0}}
+            exit={{opacity: 0, transition: {duration: 0.2}}}
+            transition={{duration: 1}}
         >
             <div className={s.content}>
                 <LocalHeader title={'SKILLS'} description={'What I Know'}/>

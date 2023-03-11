@@ -2,16 +2,24 @@ import React from 'react';
 import s from './Home.module.scss';
 import photoBg from '../../assets/main.jpg'
 import {motion} from "framer-motion";
+import {Cursor, useTypewriter} from "react-simple-typewriter";
 
 
 const Home = () => {
 
+    const [text, count] = useTypewriter({
+        words: ['I am Frontend developer','Guy-who-loves-coffee.tsx', '<ButLovesToCreateComponentMore/>'],
+        loop: true,
+        delaySpeed: 2000
+    })
+
     return (
         <motion.div
             className={s.container}
-            initial={{width: 0}}
-            animate={{width: '75%'}}
-            exit={{x: window.innerWidth, transition: { duration: 1}}}
+            initial={{x: 300}}
+            animate={{x: 0}}
+            exit={{opacity: 0, transition: {duration: 0.2}}}
+            transition={{duration: 1}}
         >
             <div className={s.leftSide}>
                 <div className={s.photo}>
@@ -23,8 +31,9 @@ const Home = () => {
                     <span>ALEXANDER</span>
                     <span>TATUREVICH</span>
                 </h1>
-                <div>
-                    <span>I am Frontend developer</span>
+                <div className={s.containerForSpan}>
+                    <span>{text}</span>
+                    <Cursor cursorColor='#bbb' cursorBlinking={true}/>
                 </div>
                 <div className={s.contacts}>
                     <div>
