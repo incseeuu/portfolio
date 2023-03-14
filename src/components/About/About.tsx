@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './About.module.scss'
-import LocalHeader from "../../common/components/LocalHeader";
+import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
                         <ul className={s.value}>
                             <li>18.02.1998</li>
                             <li>25</li>
-                            <li>Lugansk, Russian Federation</li>
+                            <li>Rostov-On-Don, Russian Federation</li>
                             <li>alexandr.taturevich@gmail.com</li>
                             <li>+7 959 188 07 25</li>
                         </ul>

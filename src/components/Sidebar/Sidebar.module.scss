@@ -9,6 +9,7 @@
   height: 100vh;
   width: 25%;
   background: $secondBgColor;
+  transition: 0.5s;
 
   .content {
     h1 {
@@ -34,6 +35,41 @@
 
     span {
       color: $secondaryColor;
+    }
+  }
+}
+
+
+
+@media (max-width: 913px) {
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+
+    .content {
+
+      .navigation {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .active {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@media (max-width: 541px) {
+  .container {
+
+    .content {
+
+      .navigation {
+        font-size: 20px;
+      }
     }
   }
 }

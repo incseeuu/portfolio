@@ -113,3 +113,210 @@
     filter: blur(0);
   }
 }
+
+
+@media (max-width: 1025px) {
+  .container {
+
+    .leftSide {
+      .photo {
+        width: 200px;
+        height: 200px;
+
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+
+
+    }
+
+    .rightSide {
+
+      h1 {
+
+        span {
+          font-size: 25px;
+        }
+      }
+
+      div {
+        span {
+          font-size: 25px;
+        }
+      }
+
+      .contacts {
+
+        .icon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 913px) {
+  .container {
+    position: relative;
+    left: 100px;
+    flex-direction: column;
+
+    .leftSide {
+      .photo {
+        width: 400px;
+        height: 400px;
+
+        img {
+          width: 400px;
+          height: 400px;
+        }
+      }
+
+
+
+    }
+
+    .rightSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h1 {
+
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    left: 70px;
+
+    .leftSide {
+      .photo {
+        width: 250px;
+        height: 250px;
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+
+    }
+
+    .rightSide {
+
+      h1 {
+
+        span {
+          font-size: 25px;
+        }
+      }
+
+      div {
+        span {
+          font-size: 20px;
+        }
+      }
+
+    }
+
+  }
+}
+
+@media (max-width: 415px) {
+  .container {
+    gap: 0;
+    left: 50px;
+
+    .leftSide {
+      .photo {
+        width: 200px;
+        height: 200px;
+
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+    }
+
+    .rightSide {
+      h1 {
+
+        span {
+          font-size: 17px;
+        }
+      }
+
+      div {
+        span {
+          letter-spacing: 1px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 394px) {
+  .container {
+    .rightSide {
+      h1 {
+
+        span {
+          font-size: 15px;
+        }
+      }
+
+      div {
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 394px) {
+  .container {
+    .rightSide {
+      h1 {
+
+        span {
+          letter-spacing: 4px;
+        }
+      }
+
+      div {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 394px) {
+  .container {
+    .rightSide {
+      div {
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

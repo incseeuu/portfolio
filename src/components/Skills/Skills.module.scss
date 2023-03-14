@@ -29,3 +29,38 @@
     filter: blur(0);
   }
 }
+
+@media (max-width: 1025px) {
+  .container {
+     .content{
+       .skills {
+         grid-template-columns: repeat(2, 1fr);
+       }
+     }
+  }
+}
+
+@media (max-width: 913px) {
+  .container {
+    left: 130px;
+  }
+}
+
+@media (max-width: 821px) {
+  .container {
+    min-width: 100vw;
+    left: 0;
+  }
+}
+
+@media (max-width: 415px) {
+  .container {
+    left: 10px;
+
+    .content{
+      .skills {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

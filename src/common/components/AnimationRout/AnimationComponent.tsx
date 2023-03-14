@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route, Routes, useLocation} from "react-router-dom";
-import Home from "../../components/Home/Home";
-import Skills from "../../components/Skills/Skills";
-import About from "../../components/About/About";
-import Works from "../../components/Works/Works";
-import Contact from "../../components/Contact/Contact";
+import Home from "../../../components/Home/Home";
+import Skills from "../../../components/Skills/Skills";
+import About from "../../../components/About/About";
+import Works from "../../../components/Works/Works";
+import Contact from "../../../components/Contact/Contact";
 import {AnimatePresence} from "framer-motion";
 
 const AnimationComponent = () => {

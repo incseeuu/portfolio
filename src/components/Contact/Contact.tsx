@@ -1,16 +1,12 @@
 import React from 'react';
 import s from './Contacts.module.scss'
-import LocalHeader from "../../common/components/LocalHeader";
+import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
 
 const Contact = () => {
     return (
         <motion.div
             className={s.container}
-            // initial={{x: -500, opacity: 0, scale: 0.5}}
-            // animate={{x: 0, opacity: 1, scale: 1}}
-            // exit={{x: 500, opacity: 0, scale: 0.5}}
-            // transition={{duration: 1, ease: 'circIn'}}
             initial={{x: 300}}
             animate={{x: 0}}
             exit={{opacity: 0, transition: {duration: 0.2}}}
@@ -19,8 +15,9 @@ const Contact = () => {
             <div className={s.content}>
                 <LocalHeader title={'CONTACTS'} description={'Get in Touch'} />
                 <div className={s.map}>
+
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.4124705206192!2d39.27610711351997!3d48.56443109899435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x411fdac4d193f105%3A0x5e419fc9eeadecca!2z0YPQuy4g0KHQvtCy0LXRgtGB0LrQsNGPLCAxNSwg0JvRg9Cz0LDQvdGB0LosINCb0YPQs9Cw0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDkxMDAw!5e0!3m2!1sru!2sde!4v1678123626644!5m2!1sru!2sde"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5418.7229448879325!2d39.7027181!3d47.2290749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1678651036354!5m2!1sru!2sru"
                         width="auto" height="400" style={{"border":0}} allowFullScreen={false} loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
