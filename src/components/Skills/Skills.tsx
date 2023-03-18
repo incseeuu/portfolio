@@ -17,19 +17,19 @@ import {ReactComponent as Storybook} from "../../assets/storybook.svg";
 import {ReactComponent as TS} from "../../assets/typescript-2.svg";
 
 const stateForTechnology = [
-    {id: 1, title: 'HTML', path: 'https://developer.mozilla.org/en-US/docs/Web/HTML',svg: <Html/>},
-    {id: 2, title: 'CSS', path: 'https://developer.mozilla.org/en-US/docs/Web/CSS',svg: <Css/>},
-    {id: 3, title: 'JavaScript', path: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',svg: <JS/>},
-    {id: 4, title: 'TypeScript', path: 'https://www.typescriptlang.org/',svg: <TS/>},
-    {id: 5, title: 'React', path: 'https://en.wikipedia.org/wiki/React_(JavaScript_library)',svg: <ReactJS/>},
-    {id: 6, title: 'Redux', path: 'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',svg: <Redux/>},
-    {id: 7, title: 'Redux-Toolkit', path: 'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',svg: <Redux/>},
-    {id: 8, title: 'Axios', path: 'https://axios-http.com/docs/intro',svg: <Axios/>},
-    {id: 9, title: 'Storybook', path: 'https://storybook.js.org/',svg: <Storybook/>},
-    {id: 10, title: 'JEST', path: 'https://jestjs.io/',svg: <Jest/>},
-    {id: 11, title: 'Material UI', path: 'https://mui.com/',svg: <MaterialUI/>},
-    {id: 12, title: 'Styled Component', path: 'https://styled-components.com/docs',svg: <Styled/>},
-    {id: 13, title: 'SASS', path: 'https://sass-lang.com/',svg: <SASS/>}
+    {id: 1, delay: 1 ,title: 'HTML', path: 'https://developer.mozilla.org/en-US/docs/Web/HTML',svg: <Html/>},
+    {id: 2, delay: 2 ,title: 'CSS', path: 'https://developer.mozilla.org/en-US/docs/Web/CSS',svg: <Css/>},
+    {id: 3, delay: 3 ,title: 'JavaScript', path: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',svg: <JS/>},
+    {id: 4, delay: 4 ,title: 'TypeScript', path: 'https://www.typescriptlang.org/',svg: <TS/>},
+    {id: 5, delay: 5 ,title: 'React', path: 'https://en.wikipedia.org/wiki/React_(JavaScript_library)',svg: <ReactJS/>},
+    {id: 6, delay: 6 ,title: 'Redux', path: 'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',svg: <Redux/>},
+    {id: 7, delay: 7 ,title: 'Redux-Toolkit', path: 'https://en.wikipedia.org/wiki/Redux_(JavaScript_library)',svg: <Redux/>},
+    {id: 8, delay: 8 ,title: 'Axios', path: 'https://axios-http.com/docs/intro',svg: <Axios/>},
+    {id: 9, delay: 4 ,title: 'Storybook', path: 'https://storybook.js.org/',svg: <Storybook/>},
+    {id: 10, delay: 5 ,title: 'JEST', path: 'https://jestjs.io/',svg: <Jest/>},
+    {id: 11, delay: 7 ,title: 'Material UI', path: 'https://mui.com/',svg: <MaterialUI/>},
+    {id: 12, delay: 8 ,title: 'Styled Component', path: 'https://styled-components.com/docs',svg: <Styled/>},
+    {id: 13, delay: 5 ,title: 'SASS', path: 'https://sass-lang.com/',svg: <SASS/>}
 ]
 
 const TextAnimation = {
@@ -57,16 +57,15 @@ const Skills = () => {
             // animate={{x: 0}}
             // exit={{opacity: 0, transition: {duration: 0.2}}}
             // transition={{duration: 1}}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{amount: 0}}
+
         >
             <div className={s.content}>
                 <LocalHeader title={'SKILLS'} description={'What I Know'}/>
                 <div className={s.skills}>
                     {stateForTechnology.map((el, index) => {
                         return (
-                            <MTechnology custom={index + 1} variants={TextAnimation} key={el.id} title={el.title} path={el.path} children={el.svg} />
+                            <MTechnology initial="hidden"
+                                         whileInView="visible" custom={el.delay} variants={TextAnimation} key={el.id} title={el.title} path={el.path} children={el.svg} />
                         )
                     })}
                 </div>

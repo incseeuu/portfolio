@@ -27,12 +27,10 @@ const Technology: React.FC<PropsType> = forwardRef(({title, path, children}, ref
                     viewport={{amount: 0}}
                     custom={1} variants={TextAnimation}
                     className={s.container}
-                    ref={ref as Ref<HTMLDivElement> | undefined | undefined }>
+                    ref={ref as Ref<HTMLDivElement>}>
             <div className={s.header}>
                 <h2 className={s.title}>{title}</h2>
-                <motion.div custom={2}
-                            viewport={{amount: 0.5}}
-                            variants={TextAnimation} className={s.svg + (title === 'Axios' ? ' ' + s.svgAxios : '') }>{children}</motion.div>
+                <motion.div  className={s.svg + (title === 'Axios' ? ' ' + s.svgAxios : '') }>{children}</motion.div>
             </div>
             <div className={s.moreWrapper}></div>
             <div className={s.more}>
