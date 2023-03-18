@@ -59,3 +59,19 @@
     transform: scaleY(0);;
   }
 }
+
+@media (max-width: 541px) {
+  .work {
+
+    img {
+      height: 15em;
+    }
+
+    .view {
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+}

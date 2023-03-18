@@ -15,11 +15,10 @@ const Contact = () => {
             <div className={s.content}>
                 <LocalHeader title={'CONTACTS'} description={'Get in Touch'} />
                 <div className={s.map}>
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5418.7229448879325!2d39.7027181!3d47.2290749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1678651036354!5m2!1sru!2sru"
-                        width="auto" height="400" style={{"border":0}} allowFullScreen={false} loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5418.7229448879325!2d39.7027181!3d47.2290749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2z0KDQvtGB0YLQvtCyLdC90LAt0JTQvtC90YMsINCg0L7RgdGC0L7QstGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1678651036354!5m2!1sru!2sru"
+                            width="auto"  style={{"border":0}} allowFullScreen={false} loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                     <form className={s.form}>
                         <input placeholder={'Name'}/>

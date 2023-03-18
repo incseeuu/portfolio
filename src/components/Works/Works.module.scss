@@ -30,3 +30,23 @@
     filter: blur(0);
   }
 }
+
+@media (max-width: 913px) {
+  .container {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 415px) {
+  .container{
+
+    .content{
+
+      .works{
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+}

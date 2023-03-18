@@ -18,7 +18,7 @@ const About = () => {
                 <div className={s.photoBlock}>
                     <img/>
                     <h2>Alexander Taturevich</h2>
-                    <span>Web Developer</span>
+                    <span>Frontend Developer</span>
                 </div>
                 <div className={s.description}>Hi, my name is Alexander Taturevich and I am a Frontend developer.
                     Half a year ago I started training for web development. My main set of technologies is React and Redux.

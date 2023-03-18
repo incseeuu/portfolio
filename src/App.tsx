@@ -10,8 +10,6 @@ function App() {
 
     const [toggleMenu, setToggleMenu] = useState(true)
 
-    console.log(toggleMenu)
-
     return (
         <div className='App' style={{overflow: 'hidden'}}>
             <Burger callback={setToggleMenu} value={toggleMenu}/>
