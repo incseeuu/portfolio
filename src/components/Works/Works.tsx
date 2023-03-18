@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './Works.module.scss'
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import sn from '../../assets/social-network.jpg';
@@ -17,12 +17,16 @@ const stateForWork = [
 
 const Works = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
+
     return (
         <motion.div
             className={s.container}
             initial={{x: 300}}
             animate={{x: 0}}
-            exit={{opacity: 0, transition: {duration: 0.2}}}
+            // exit={{opacity: 0, transition: {duration: 0.2}}}
             transition={{duration: 1}}
         >
             <div className={s.content}>

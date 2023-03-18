@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './About.module.scss'
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
     return (
         <motion.div
             className={s.container}
             // initial={{x: -500, opacity: 0, scale: 0.5}}
             initial={{x: 300}}
             animate={{x: 0}}
-            exit={{opacity: 0, transition: {duration: 0.2}}}
+            // exit={{opacity: 0, transition: {duration: 0.2}}}
             transition={{duration: 1}}
         >
             <div className={s.content}>

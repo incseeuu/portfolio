@@ -9,7 +9,7 @@ const Contact = () => {
             className={s.container}
             initial={{x: 300}}
             animate={{x: 0}}
-            exit={{opacity: 0, transition: {duration: 0.2}}}
+            // exit={{opacity: 0, transition: {duration: 0.2}}}
             transition={{duration: 1}}
         >
             <div className={s.content}>

@@ -1,6 +1,6 @@
-import React, { CSSProperties } from 'react';
+import React, {CSSProperties, useEffect} from 'react';
 import s from './Skills.module.scss'
-import Technology from "./Technology/Technology";
+import {MTechnology} from "./Technology/Technology";
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
 import {ReactComponent as Axios} from "../../assets/axios2.svg";
@@ -32,22 +32,41 @@ const stateForTechnology = [
     {id: 13, title: 'SASS', path: 'https://sass-lang.com/',svg: <SASS/>}
 ]
 
+const TextAnimation = {
+    hidden: {
+        y: -100,
+        opacity: 0,
+    },
+    visible: (custom: number) => ({
+        y: 0,
+        opacity: 1,
+        transition: { delay: custom * 0.3}
+    })
+}
+
 const Skills = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
 
     return (
         <motion.div
             className={s.container}
-            initial={{x: 300}}
-            animate={{x: 0}}
-            exit={{opacity: 0, transition: {duration: 0.2}}}
-            transition={{duration: 1}}
+            // initial={{x: 300}}
+            // animate={{x: 0}}
+            // exit={{opacity: 0, transition: {duration: 0.2}}}
+            // transition={{duration: 1}}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{amount: 0}}
         >
             <div className={s.content}>
                 <LocalHeader title={'SKILLS'} description={'What I Know'}/>
                 <div className={s.skills}>
-                    {stateForTechnology.map(el => {
+                    {stateForTechnology.map((el, index) => {
                         return (
-                            <Technology key={el.id} title={el.title} path={el.path} children={el.svg} />
+                            <MTechnology custom={index + 1} variants={TextAnimation} key={el.id} title={el.title} path={el.path} children={el.svg} />
                         )
                     })}
                 </div>
