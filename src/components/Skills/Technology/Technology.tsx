@@ -24,8 +24,8 @@ const Technology: React.FC<PropsType> = forwardRef(({title, path, children}, ref
     return (
         <motion.div initial="hidden"
                     whileInView="visible"
-                    viewport={{amount: 0}}
-                    custom={1} variants={TextAnimation}
+
+                    custom={2} variants={TextAnimation}
                     className={s.container}
                     ref={ref as Ref<HTMLDivElement>}>
             <div className={s.header}>
