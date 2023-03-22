@@ -8,12 +8,16 @@ type PropsType = {
 
 const Burger: React.FC<PropsType> = ({callback, value}) => {
 
+    const handler = () => {
+        callback(!value)
+    }
+
     return (
-            <div onClick={() => callback(!value)} className={s.menuToggle} >
+            <div onClick={handler} className={s.menuToggle} >
                 <input type="checkbox" />
-                <span className={!value ? s.active : ''}></span>
-                <span className={!value ? s.active : ''}></span>
-                <span className={!value ? s.active : ''}></span>
+                <span className={value ? s.active : ''}></span>
+                <span className={value ? s.active : ''}></span>
+                <span className={value ? s.active : ''}></span>
             </div>
     );
 };

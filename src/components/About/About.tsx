@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import s from './About.module.scss'
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
+import photo from '../../assets/2.jpg'
 
 const About = () => {
     useEffect(() => {
@@ -19,7 +20,7 @@ const About = () => {
             <div className={s.content}>
                 <LocalHeader title={'ABOUT ME'} description={'What About Me'} />
                 <div className={s.photoBlock}>
-                    <img/>
+                    <img src={photo}/>
                     <h2>Alexander Taturevich</h2>
                     <span>Frontend Developer</span>
                 </div>
@@ -54,7 +55,7 @@ const About = () => {
                             <li>Freelance:</li>
                         </ul>
                         <ul className={s.value}>
-                            <li>Ukraine</li>
+                            <li>Russian</li>
                             <li>East Ukrainian National University</li>
                             <li>Bachelor</li>
                             <li>Playing Football</li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Home.module.scss';
-import photoBg from '../../assets/main.jpg'
+import photoBg from '../../assets/2.jpg'
 import {motion} from "framer-motion";
 import {Cursor, useTypewriter} from "react-simple-typewriter";
 
