@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.cd2ab26b.css",
-    "main.js": "/portfolio/static/js/main.7fb1ae8c.js",
+    "main.css": "/portfolio/static/css/main.90f4269b.css",
+    "main.js": "/portfolio/static/js/main.6c924380.js",
     "static/js/787.4a83ae70.chunk.js": "/portfolio/static/js/787.4a83ae70.chunk.js",
-    "static/media/main.jpg": "/portfolio/static/media/main.fa640985997bde93a4b3.jpg",
+    "static/media/2.jpg": "/portfolio/static/media/2.b6b2f28f253d57851631.jpg",
     "static/media/social-network.jpg": "/portfolio/static/media/social-network.b1ce0aac1805c2ec6683.jpg",
     "static/media/todo.jpg": "/portfolio/static/media/todo.5839b1094e4cbb3cb66e.jpg",
     "static/media/pizza.jpg": "/portfolio/static/media/pizza.ba75eb368c048dc3f6b7.jpg",
@@ -21,12 +21,12 @@
     "static/media/css-3.svg": "/portfolio/static/media/css-3.83d9783ddb6283ee654c8aa25e6c6626.svg",
     "static/media/html-1.svg": "/portfolio/static/media/html-1.d8e27b302ed1bcaee38b3ef65cc7686b.svg",
     "static/media/material-ui-1.svg": "/portfolio/static/media/material-ui-1.5e99519fdbb1924cccae16ecc27b65bb.svg",
-    "main.cd2ab26b.css.map": "/portfolio/static/css/main.cd2ab26b.css.map",
-    "main.7fb1ae8c.js.map": "/portfolio/static/js/main.7fb1ae8c.js.map",
+    "main.90f4269b.css.map": "/portfolio/static/css/main.90f4269b.css.map",
+    "main.6c924380.js.map": "/portfolio/static/js/main.6c924380.js.map",
     "787.4a83ae70.chunk.js.map": "/portfolio/static/js/787.4a83ae70.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd2ab26b.css",
-    "static/js/main.7fb1ae8c.js"
+    "static/css/main.90f4269b.css",
+    "static/js/main.6c924380.js"
   ]
 }
