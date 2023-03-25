@@ -13,7 +13,6 @@ function App() {
     }
 
     const [toggleMenu, setToggleMenu] = useState(false)
-    console.log(toggleMenu)
 
     return (
         <ThemeContext.Provider value={{theme, toggleTheme}}>

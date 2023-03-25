@@ -12,12 +12,10 @@ type PropsType = {
 const Sidebar: React.FC<PropsType> = ({toggleMenu, callback}) => {
 
     const { height, width } = useWindowDimensions()
-    console.log(height, width)
 
     const {theme} = useContext(ThemeContext)
 
     const containerClass = s.container + (!toggleMenu ? ' ' + s.active : '')
-    console.log(toggleMenu)
 
     const toggleMenuHandler = () => {
         width && width < 913 && callback(false)

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import s from './About.module.scss'
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
-import photo from '../../assets/2.jpg'
+import photo from '../../assets/21.jpg'
 
 const About = () => {
     useEffect(() => {
