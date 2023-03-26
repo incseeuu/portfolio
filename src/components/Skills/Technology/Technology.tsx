@@ -1,6 +1,7 @@
-import React, {forwardRef, ReactNode, Ref} from 'react';
+import React, {forwardRef, ReactNode, Ref, useContext} from 'react';
 import s from './Technology.module.scss'
 import {motion} from "framer-motion";
+import {CursorContext} from "../../../App";
 
 type PropsType = {
     title: string
@@ -21,13 +22,16 @@ const TextAnimation = {
 }
 
 const Technology: React.FC<PropsType> = forwardRef(({title, path, children}, ref) => {
+
+    const {textEnter, textLeave} = useContext(CursorContext)
     return (
         <motion.div initial="hidden"
                     whileInView="visible"
-
                     custom={2} variants={TextAnimation}
                     className={s.container}
-                    ref={ref as Ref<HTMLDivElement>}>
+                    ref={ref as Ref<HTMLDivElement>}
+                    onMouseEnter={textEnter} onMouseLeave={textLeave}
+        >
             <div className={s.header}>
                 <h2 className={s.title}>{title}</h2>
                 <motion.div  className={s.svg + (title === 'Axios' ? ' ' + s.svgAxios : '') }>{children}</motion.div>

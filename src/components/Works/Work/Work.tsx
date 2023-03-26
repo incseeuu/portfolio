@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from "./Work.module.scss";
+import {CursorContext} from "../../../App";
 
 type PropsType = {
     title: string
@@ -8,8 +9,10 @@ type PropsType = {
 }
 
 const Work: React.FC<PropsType> = ({title,path,src}) => {
+    const {textEnter, textLeave} = useContext(CursorContext)
+
     return (
-        <div className={s.work}>
+        <div className={s.work} onMouseEnter={textEnter} onMouseLeave={textLeave}>
             <div className={s.shadow}></div>
             <img  src={src}/>
             <div className={s.view}>

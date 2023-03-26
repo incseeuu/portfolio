@@ -1,4 +1,4 @@
-import React, {CSSProperties, useContext, useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import s from './Skills.module.scss'
 import {MTechnology} from "./Technology/Technology";
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
@@ -15,7 +15,7 @@ import {ReactComponent as Styled} from "../../assets/styled-components-1.svg";
 import {ReactComponent as SASS} from "../../assets/sass-1.svg";
 import {ReactComponent as Storybook} from "../../assets/storybook.svg";
 import {ReactComponent as TS} from "../../assets/typescript-2.svg";
-import { ThemeContext } from '../../App';
+import {CursorContext} from '../../App';
 
 const stateForTechnology = [
     {id: 1, delay: 1, title: 'HTML', path: 'https://developer.mozilla.org/en-US/docs/Web/HTML', svg: <Html/>},
@@ -59,7 +59,7 @@ const TextAnimation = {
 
 const Skills = () => {
 
-     const {theme} = useContext(ThemeContext)
+
 
 
     useEffect(() => {
@@ -69,10 +69,6 @@ const Skills = () => {
     return (
         <motion.div
             className={s.container}
-            // initial={{x: 300}}
-            // animate={{x: 0}}
-            // exit={{opacity: 0, transition: {duration: 0.2}}}
-            // transition={{duration: 1}}
 
         >
             <div className={s.content}>

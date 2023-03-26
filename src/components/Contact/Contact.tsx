@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './Contacts.module.scss'
 import LocalHeader from "../../common/components/LocalHeader/LocalHeader";
 import {motion} from "framer-motion";
+import {CursorContext} from "../../App";
 
 const Contact = () => {
+
+    const {textEnter, textLeave} = useContext(CursorContext)
+
     return (
         <motion.div
             className={s.container}
@@ -24,7 +28,7 @@ const Contact = () => {
                         <input placeholder={'Name'}/>
                         <input placeholder={'Email'}/>
                         <textarea placeholder={'Message'}/>
-                        <button>Send Message</button>
+                        <button onMouseEnter={textEnter} onMouseLeave={textLeave}>Send Message</button>
                     </form>
             </div>
         </motion.div>

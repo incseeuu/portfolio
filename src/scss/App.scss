@@ -1,5 +1,6 @@
 @import "src/scss/variables";
 
+
 .App {
   position: relative;
   background: $bgColor;
@@ -7,10 +8,39 @@
   max-width: 100vw;
   font-family: 'Tilt Neon', cursive;
 }
-//#light {
-//  background: #fff;
-//}
 
+.cursor {
+  position: fixed;
+  z-index: 2;
+  //background-color: #ffffff;
+  border: 1px #fff solid;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  left: 0;
+  top:0;
+  pointer-events: none;
+}
+
+.microCursor {
+  position: fixed;
+  z-index: 3;
+  background-color: #ffffff;
+  //border: 1px #fff solid;
+  left: 0;
+  top:0;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (max-width: 1281px) {
+  .cursor, .microCursor {
+    display: none;
+  }
+  
+}
 
 
 

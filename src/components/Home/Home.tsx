@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import s from './Home.module.scss';
 import photoBg from '../../assets/21.jpg'
 import {motion} from "framer-motion";
 import {Cursor, useTypewriter} from "react-simple-typewriter";
+import {CursorContext} from "../../App";
 
 
 const Home = () => {
@@ -12,6 +13,8 @@ const Home = () => {
         loop: true,
         delaySpeed: 2000
     })
+
+    const {textEnter, textLeave} = useContext(CursorContext)
 
     return (
         <motion.div
@@ -23,21 +26,21 @@ const Home = () => {
         >
             <div className={s.leftSide}>
                 <div className={s.photo}>
-                    <img src={photoBg}/>
+                    <img src={photoBg} />
                 </div>
             </div>
             <div className={s.rightSide}>
                 <h1>
-                    <span>ALEXANDER</span>
-                    <span>TATUREVICH</span>
+                    <span >ALEXANDER</span>
+                    <span >TATUREVICH</span>
                 </h1>
                 <div className={s.containerForSpan}>
-                    <span>{text}</span>
+                    <span >{text}</span>
                     <Cursor cursorColor='#bbb' cursorBlinking={true}/>
                 </div>
                 <div className={s.contacts}>
                     <div>
-                        <a href={'https://t.me/heathxn'} target='_blank'>
+                        <a href={'https://t.me/heathxn'} target='_blank' onMouseEnter={textEnter} onMouseLeave={textLeave}>
                             <svg className={s.icon} version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                  x="0px"
                                  y="0px"
@@ -51,7 +54,7 @@ const Home = () => {
 
                     </div>
                     <div>
-                        <a href={'https://www.linkedin.com/in/alexander-taturevich-aba77a234/'} target='_blank'>
+                        <a href={'https://www.linkedin.com/in/alexander-taturevich-aba77a234/'} target='_blank' onMouseEnter={textEnter} onMouseLeave={textLeave}>
                             <svg className={s.icon} version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                  color='white'
                                  viewBox="0 0 50 50">
@@ -71,7 +74,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div>
-                        <a href={'https://www.instagram.com/incseeu/'} target='_blank'>
+                        <a href={'https://www.instagram.com/incseeu/'} target='_blank' onMouseEnter={textEnter} onMouseLeave={textLeave}>
                             <svg className={s.icon} xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                  viewBox="0 0 24 24">
                                 <path fillRule="evenodd"
