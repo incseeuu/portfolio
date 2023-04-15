@@ -29,9 +29,27 @@
     .form {
       margin-top: 10px;
       display: flex;
+      position: relative;
       flex-direction: column;
       gap: 10px;
 
+      .success {
+        position: sticky;
+        padding: 10px;
+        max-width: fit-content;
+        background: $secondBgColor;
+        bottom: -20px;
+        color: #fff;
+      }
+
+      .error {
+        color: red;
+
+        &::before {
+          display: inline;
+          content: "⚠ ";
+        }
+      }
       textarea {
         border: 1px solid rgba(255,255,255,.2);
         color: $primaryColor;
