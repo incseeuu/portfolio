@@ -41,7 +41,7 @@ const stateForTechnology = [
     {id: 10, delay: 3, title: 'JEST', path: 'https://jestjs.io/', svg: <Jest/>},
     {id: 11, delay: 4, title: 'Material UI', path: 'https://mui.com/', svg: <MaterialUI/>},
     {id: 12, delay: 5, title: 'Styled Component', path: 'https://styled-components.com/docs', svg: <Styled/>},
-    {id: 13, delay: 3, title: 'SASS', path: 'https://sass-lang.com/', svg: <SASS/>}
+    {id: 13, delay: 4, title: 'SASS', path: 'https://sass-lang.com/', svg: <SASS/>}
 ]
 
 const TextAnimation = {
