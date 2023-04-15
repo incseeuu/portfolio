@@ -81,7 +81,7 @@ const About = () => {
                                     <div className={s.time}>2022-2023</div>
                                     <div className={s.place}>
                                         <h3>It-Incubator</h3>
-                                        <a href={'https://it-incubator.io/education/front-end'}>Frontend Developer</a>
+                                        <a href={'https://it-incubator.io/education/front-end'} target={'_blank'}>Frontend Developer</a>
                                     </div>
                                 </div>
 
